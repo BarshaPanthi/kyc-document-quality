@@ -1,0 +1,17 @@
+Run these one by one in PowerShell:
+Step 1 — Create a fresh conda environment (recommended over .venv)
+powershell
+conda create -n kyc python=3.10 -y
+Step 2 — Activate it
+powershell
+conda activate kyc
+Step 3 — Install everything cleanly
+powershell
+pip install opencv-python numpy==1.26.4 pandas==2.0.0 matplotlib jupyter ipykernel tqdm streamlit
+Step 4 — Register it as a Jupyter kernel so notebooks work
+powershell
+python -m ipykernel install --user --name kyc --display-name "Python (kyc)"
+Step 5 — Run the pipeline
+powershell
+cd C:\kyc-document-quality
+python src/pipeline.py
